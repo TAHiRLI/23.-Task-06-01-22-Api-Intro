@@ -3,6 +3,11 @@ using Microsoft.EntityFrameworkCore;
 using Store.Data;
 using Store.Data.Entities;
 using StoreApp.Dtos.ProductDtos;
+using StoreApp.Helpers;
+using System.Net.Http.Headers;
+using System.Text;
+using Microsoft.AspNetCore.Hosting;
+using IHostingEnvironment = Microsoft.AspNetCore.Hosting.IHostingEnvironment;
 
 namespace StoreApp.Controllers
 {
@@ -11,10 +16,12 @@ namespace StoreApp.Controllers
     public class ProductsController : ControllerBase
     {
         private readonly StoreDbContext _context;
+        private readonly IHostingEnvironment _env;
 
-        public ProductsController(StoreDbContext context)
+        public ProductsController(StoreDbContext context,IHostingEnvironment env)
         {
             this._context = context;
+            this._env = env;
         }
         [HttpGet("Id")]
         public IActionResult Get(int Id)
@@ -88,6 +95,23 @@ namespace StoreApp.Controllers
             _context.Products.Remove(product);
             _context.SaveChanges();
             return NoContent();
+        }
+
+        /// <summary>
+        ///     testing to upload just a single file without validaiton
+        /// </summary>
+
+        [HttpPost("file")]
+        public async Task<IActionResult> Upload(IFormFile file)
+        {
+        
+            if (file == null)
+                return NotFound();
+
+
+            FileManager.Save(file,this._env.ContentRootPath, "Uploads", 100);
+
+            return Ok();
         }
     }
 }
