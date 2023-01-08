@@ -1,7 +1,9 @@
 using FluentValidation.AspNetCore;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.OpenApi.Models;
 using Store.Data;
 using StoreApp.Dtos.Category;
+using StoreApp.Helpers;
 using System.Text.Json.Serialization;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -20,7 +22,15 @@ builder.Services.AddControllers(options =>
     .AddFluentValidation(x=> x.RegisterValidatorsFromAssemblyContaining<CategoryPostDto>());
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
-builder.Services.AddSwaggerGen();
+builder.Services.AddSwaggerGen(x=>
+{
+    x.SwaggerDoc("v1", new OpenApiInfo {Title = "DemoSwaggerAnnotation", Version = "v1" });
+    //x.IncludeXmlComments(Path.Combine(System.AppContext.BaseDirectory, "DemoSwaggerAnnotation.xml"));
+    XmlIncluder.AddSwaggerXml(x);
+    x.IncludeXmlComments("../Store.Data/SecondProj.xml");
+
+
+});
 builder.Services.AddDbContext<StoreDbContext>(opt => opt.UseSqlServer(builder.Configuration.GetConnectionString("default")));
 
 
@@ -41,3 +51,7 @@ app.UseAuthorization();
 app.MapControllers();
 
 app.Run();
+
+
+
+

@@ -18,6 +18,10 @@ namespace StoreApp.Controllers
         {
             this._context = context;
         }
+        /// <summary>
+        /// this method returns the category by id
+        /// </summary>
+        /// <returns>Single category</returns>
         [HttpGet("{id}")]
         public IActionResult Get(int id)
         {
@@ -45,14 +49,14 @@ namespace StoreApp.Controllers
             return Ok(categoryDtoList);
         }
         [HttpPost]
-        public IActionResult Create(CategoryPostDto categoryDto)
+        public IActionResult Create(Category categorie)
         {
-
+            return Ok();
+            CategoryPostDto categoryDto = new CategoryPostDto();
             var category = new Category
             {
                 Name = categoryDto.Name
             };
-
             _context.Categories.Add(category);
             _context.SaveChanges();
             return Created("", category);

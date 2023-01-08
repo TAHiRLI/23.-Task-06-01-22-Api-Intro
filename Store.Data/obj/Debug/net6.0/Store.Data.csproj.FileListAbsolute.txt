@@ -12,3 +12,4 @@ C:\Users\Hp\Desktop\CodeAcadem\BackEnd\Tasks\23. Task 06-01-23 API Intro\Store.D
 C:\Users\Hp\Desktop\CodeAcadem\BackEnd\Tasks\23. Task 06-01-23 API Intro\Store.Data\obj\Debug\net6.0\Store.Data.pdb
 C:\Users\Hp\Desktop\CodeAcadem\BackEnd\Tasks\23. Task 06-01-23 API Intro\Store.Data\obj\Debug\net6.0\Store.Data.genruntimeconfig.cache
 C:\Users\Hp\Desktop\CodeAcadem\BackEnd\Tasks\23. Task 06-01-23 API Intro\Store.Data\obj\Debug\net6.0\ref\Store.Data.dll
+C:\Users\Hp\Desktop\CodeAcadem\BackEnd\Tasks\23. Task 06-01-23 API Intro\Store.Data\bin\Debug\net6.0\SecondProj.xml

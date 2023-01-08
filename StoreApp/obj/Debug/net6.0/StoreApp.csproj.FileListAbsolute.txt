@@ -69,3 +69,10 @@ C:\Users\Hp\Desktop\CodeAcadem\BackEnd\Tasks\23. Task 06-01-23 API Intro\StoreAp
 C:\Users\Hp\Desktop\CodeAcadem\BackEnd\Tasks\23. Task 06-01-23 API Intro\StoreApp\bin\Debug\net6.0\Microsoft.AspNetCore.Mvc.NewtonsoftJson.dll
 C:\Users\Hp\Desktop\CodeAcadem\BackEnd\Tasks\23. Task 06-01-23 API Intro\StoreApp\bin\Debug\net6.0\Newtonsoft.Json.dll
 C:\Users\Hp\Desktop\CodeAcadem\BackEnd\Tasks\23. Task 06-01-23 API Intro\StoreApp\bin\Debug\net6.0\Newtonsoft.Json.Bson.dll
+C:\Users\Hp\Desktop\CodeAcadem\BackEnd\Tasks\23. Task 06-01-23 API Intro\StoreApp\bin\Debug\net6.0\DemoSwaggerAnnotation.xml
+C:\Users\Hp\Desktop\CodeAcadem\BackEnd\Tasks\23. Task 06-01-23 API Intro\StoreApp\bin\Debug\net6.0\System.Net.Http.Formatting.dll
+C:\Users\Hp\Desktop\CodeAcadem\BackEnd\Tasks\23. Task 06-01-23 API Intro\StoreApp\bin\Debug\net6.0\System.Web.Http.dll
+C:\Users\Hp\Desktop\CodeAcadem\BackEnd\Tasks\23. Task 06-01-23 API Intro\StoreApp\bin\Debug\net6.0\System.Web.Http.WebHost.dll
+C:\Users\Hp\Desktop\CodeAcadem\BackEnd\Tasks\23. Task 06-01-23 API Intro\StoreApp\bin\Debug\net6.0\Microsoft.Web.Infrastructure.dll
+C:\Users\Hp\Desktop\CodeAcadem\BackEnd\Tasks\23. Task 06-01-23 API Intro\StoreApp\bin\Debug\net6.0\Swashbuckle.Core.dll
+C:\Users\Hp\Desktop\CodeAcadem\BackEnd\Tasks\23. Task 06-01-23 API Intro\StoreApp\bin\Debug\net6.0\WebActivatorEx.dll

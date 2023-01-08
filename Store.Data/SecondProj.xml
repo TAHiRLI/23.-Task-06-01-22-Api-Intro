@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Store.Data</name>
+    </assembly>
+    <members>
+        <member name="P:Store.Data.Entities.Category.Name">
+            <summary>
+            Works!!! 
+            -How?
+            -No Idea
+            </summary>
+        </member>
+    </members>
+</doc>
