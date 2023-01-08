@@ -48,16 +48,17 @@ namespace StoreApp.Controllers
         }
 
         [HttpPost]
-        public IActionResult Create(ProductPostDto productDto)
+        public IActionResult Create([FromForm] ProductPostDto productDto)
         {
-
+            
             Product product = new Product
             {
                 Name = productDto.Name,
                 SalePrice = productDto.SalePrice,
-                CostPrice =productDto.CostPrice,
+                CostPrice = productDto.CostPrice,
                 CategoryId = productDto.CategoryId,
-                DiscountPercent = productDto.DiscountPercent,   
+                DiscountPercent = productDto.DiscountPercent,
+                ImageUrl = FileManager.Save(productDto.File, _env.ContentRootPath, "Uploads", 100)
             };
 
             _context.Products.Add(product);
@@ -97,9 +98,11 @@ namespace StoreApp.Controllers
             return NoContent();
         }
 
-        /// <summary>
-        ///     testing to upload just a single file without validaiton
-        /// </summary>
+
+
+        //==============================
+        // TESTING TO UPLOAD FILE
+        //==============================
 
         [HttpPost("file")]
         public async Task<IActionResult> Upload(IFormFile file)

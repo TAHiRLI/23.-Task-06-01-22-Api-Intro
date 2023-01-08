@@ -20,7 +20,4 @@
     <ProjectReference Include="..\Store.Data\Store.Data.csproj" />
   </ItemGroup>
 
-	<PropertyGroup>
-		<GenerateDocumentationFile>true</GenerateDocumentationFile>
-	</PropertyGroup>
 </Project>
